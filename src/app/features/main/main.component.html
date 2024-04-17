@@ -1,0 +1,36 @@
+@if (loading) {
+    <div class="spinner-container">
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+<form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="container">
+    <select class="form-select mt-3" formControlName="country">
+        <option value="" disabled selected>Select a Country</option>
+        @for (c of countries; track c) {
+            <option [value]="c">{{ c }}</option>
+        }
+    </select>
+    <form [formGroup]="form">
+    <input type ="text"
+    formControlName="country" placeholder="Select Country">
+    </form>
+
+    <select class="form-select mt-3" formControlName="city">
+        <option value="" disabled selected>Select a City</option>
+        @for (ct of cities; track ct) {
+        
+            <option [value]="ct">{{ ct }}</option>
+
+        }
+    </select>
+    <form [formGroup]="form">
+        <input type ="text"
+        formControlName="city" placeholder="Select City">
+        </form>
+    <button class="btn mt-3" style="background: #1e4483; color: white" type="submit">Submit</button>
+</div>
+
+</form>

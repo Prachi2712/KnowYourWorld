@@ -1,0 +1,59 @@
+@if (loading) {
+    <div class="spinner-container">
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+<div class="container-detail">
+    <div class="button-container"><span style="font-size: xx-large; height: 4rem; padding: 20px; color: #1e4483;">
+        Country: {{countryName}} {{cityName}}</span>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card custom-card">
+                <div class="font-title">{{ population }}</div>
+                <div class="card-body">
+                    <p class="card-text">Total Population</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card custom-card">
+                <div class="font-title">{{ currency }}</div>
+                <div class="card-body">
+                    <p class="card-text">Currency</p>
+                </div>
+            </div>
+<!--            <div class="card custom-card">                -->
+<!--                <div>Here</div>-->
+<!--                <div class="card-body">-->
+<!--                    <p class="card-text">language</p>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card custom-card">
+                <div class="font-title">{{ location }}</div>
+                <div class="card-body">
+                    <p class="card-text">Location</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card custom-card">
+                <div class="font-title">{{ capital }}</div>
+                <div class="card-body">
+                    <p class="card-text">Capital</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="button-container">
+    <button class="btn mt-3" style="background: #1e4483; color: white" type="button" (click)="onClick()">Back</button>
+</div>
